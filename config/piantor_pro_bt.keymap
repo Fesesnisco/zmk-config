@@ -17,6 +17,50 @@
 };
 
 / {
+    behaviors {
+        /* Brillo: sin shift = sube, con shift = baja */
+        rgb_bri: rgb_brightness {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* Hue: sin shift = sube, con shift = baja */
+        rgb_hui: rgb_hue {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* Saturación: sin shift = sube, con shift = baja */
+        rgb_sai: rgb_saturation {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* Velocidad: sin shift = sube, con shift = baja */
+        rgb_spi: rgb_speed {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_SPI>, <&rgb_ug RGB_SPD>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /* Efecto: sin shift = siguiente, con shift = anterior */
+        rgb_efd: rgb_effect {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_EFF>, <&rgb_ug RGB_EFR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
