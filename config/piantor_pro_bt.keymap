@@ -103,11 +103,10 @@
             // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT | BTCR| RGB | RST | BOOT| Unlock|     |     |     |     |     |      |
             //                    | GUI |     | SPC   | ENT |     | ALT |
-                /* &none &none    &none    &none     &none       &none          &kp K_PASTE   &kp K_COPY   &kp K_CUT &kp K_UNDO    &kp K_REDO   &none */
             bindings = <
-                &none &none    &none    &none     &none       &none          &none   &none   &none &none    &none   &none
-                &none &kp LGUI &kp LALT &kp LSHFT &kp LCTRL   &none          &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT     &caps_word &none
-                &none &none    &none    &none     &bootloader &studio_unlock &kp HOME      &kp PG_DN  &kp PG_UP &kp END       &kp INS      &none
+                &none &none    &none    &none     &none       &none          &kp K_PASTE   &kp K_COPY &kp K_CUT &kp K_UNDO    &kp K_REDO &none
+                &none &kp LGUI &kp LALT &kp LSHFT &kp LCTRL   &none          &kp LEFT      &kp DOWN   &kp UP    &kp RIGHT     &caps_word &none
+                &none &none    &none    &none     &bootloader &studio_unlock &kp HOME      &kp PG_DN  &kp PG_UP &kp END       &kp INS    &none
                                         &none     &none       &none          &kp RET       &kp BSPC     &kp DEL
             >;
         };
