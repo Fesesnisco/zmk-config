@@ -22,7 +22,6 @@ include:
     shield: settings_reset
     snippet: studio-rpc-usb-uart
 
-include:
   - board: piantor_pro_bt_left//zmk
     snippet: studio-rpc-usb-uart
     shield: nice_view
