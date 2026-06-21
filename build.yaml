@@ -22,18 +22,21 @@ include:
     shield: settings_reset
     snippet: studio-rpc-usb-uart
 
-  - board: piantor_pro_bt_left
+include:
+  - board: piantor_pro_bt_left//zmk
     snippet: studio-rpc-usb-uart
     shield: nice_view
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: piantor_pro_bt_right
+
+  - board: piantor_pro_bt_right//zmk
     shield: nice_view
     snippet: studio-rpc-usb-uart
 
-  - board: piantor_pro_bt_left
+  - board: piantor_pro_bt_left//zmk
     shield: settings_reset
     snippet: studio-rpc-usb-uart
-  - board: piantor_pro_bt_right
+
+  - board: piantor_pro_bt_right//zmk
     shield: settings_reset
     snippet: studio-rpc-usb-uart
 
