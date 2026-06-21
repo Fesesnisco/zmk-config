@@ -37,14 +37,15 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "NAV";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5    |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | CTRL | BT1 | BT2 | BT3 | BT4 | BT5   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT | BTCR| RGB | RST | BOOT| Unlock|     |     |     |     |     |      |
             //                    | GUI |     | SPC   | ENT |     | ALT |
+                /* &none &none    &none    &none     &none       &none          &kp K_PASTE   &kp K_COPY   &kp K_CUT &kp K_UNDO    &kp K_REDO   &none */
             bindings = <
-                &none &none    &none    &none     &none       &none          &kp K_PASTE   &kp K_COPY   &kp K_CUT &kp K_UNDO    &kp K_REDO   &none
+                &none &none    &none    &none     &none       &none          &none   &none   &none &none    &none   &none
                 &none &kp LGUI &kp LALT &kp LSHFT &kp LCTRL   &none          &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT     &u_caps_word &none
                 &none &none    &none    &none     &bootloader &studio_unlock &kp HOME      &kp PG_DOWN  &kp PG_UP &kp END       &kp INS      &none
                                         &none     &trans      &none          &kp RET       &kp BSPC     &kp DEL
@@ -52,17 +53,17 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "MOUSE";
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL | HUD | HUI |     |     |     |  -  |  =  |  [  |  ]  |  \  |  `   |
             // | SHFT |     |     |     |     |     |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC | ENT |     | ALT |
             bindings = <
-                &kp  TAB  &kp EXCL        &kp AT          &kp HASH &kp DLLR &kp PRCNT &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-                &kp LCTRL &rgb_ug RGB_HUD &rgb_ug RGB_HUI &trans   &trans   &trans    &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-                &kp LSHFT &trans          &trans          &trans   &trans   &trans    &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                                                          &kp LGUI &trans   &kp SPACE &kp RET   &trans   &kp RALT
+                &none &none    &none    &none     &none       &none          &kp K_PASTE     &kp K_COPY      &kp K_CUT     &kp K_UNDO       &kp K_REDO   &none
+                &none &kp LGUI &kp LALT &kp LSHFT &kp LCTRL   &none          &mmv MOUSE_LEFT &mmv MOUSE_DOWN &mmv MOUSE_UP &mmv MOUSE_RIGHT &none        &none
+                &none &none    &none    &none     &bootloader &studio_unlock &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none        &none
+                                        &none     &trans      &none          &mkp RCLK       &mkp LCLK       &mkp MCLK
             >;
         };
 
